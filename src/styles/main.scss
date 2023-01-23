@@ -13,7 +13,10 @@
   --border-colour: rgb(237, 239, 245);
 
   --colour-primary: #0066ff;
+  --colour-primary-translucent: #{transparentize(#0066ff, 0.8)};
   --colour-accent: #ff1e00;
+  --colour-accent-hover: #{darken(#ff1e00, 5%)};
+  --colour-accent-active: #{darken(#ff1e00, 15%)};
   // --colour-secondary: #b8c8e0;
   --colour-secondary: #bdc2db;
   --colour-secondary: #a6bad9;
@@ -22,7 +25,7 @@
   --colour-font-translucent: #{transparentize(#333a58, 0.2)};
   // --colour-font: #353535;
 
-  --max-width: 800px;
+  --max-width: 822px;
   --font-code: 'Fira Code', monospace;
 
   --colour-red: #e9190f;
@@ -61,6 +64,10 @@ body {
       text-decoration: underline;
     }
   }
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {

@@ -1,4 +1,5 @@
 import Apps from '@/components/Apps';
+import Contact from '@/components/Contact';
 import DocumentHead from '@/components/Head';
 import Hero from '@/components/Hero';
 import { Inter } from '@next/font/google';
@@ -12,6 +13,7 @@ export default function Home() {
       <DocumentHead />
       <Hero />
       <Apps />
+      <Contact />
     </>
   );
 }
