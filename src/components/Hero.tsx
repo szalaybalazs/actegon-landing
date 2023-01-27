@@ -10,6 +10,18 @@ const Wrapper = styled.div`
   flex-direction: column;
   height: 80vh;
   justify-content: center;
+  position: relative;
+  /* &::after {
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    height: 80vh;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    content: '';
+    display: block;
+    z-index: -1;
+    opacity: 0.1;
+  } */
 `;
 const Title = styled.h1`
   font-size: 4rem;

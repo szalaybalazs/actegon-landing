@@ -129,7 +129,7 @@ const Contact: FunctionComponent<iContactProps> = () => {
   });
 
   return (
-    <Wrapper>
+    <Wrapper id='contact'>
       <Title>We would love to hear from you, Get in touch 👋</Title>
       <Content>
         <InputWrapper area='name'>
