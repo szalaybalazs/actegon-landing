@@ -15,12 +15,14 @@ const Title = styled.strong`
   color: white;
   font-weight: 600;
   margin: 0;
+  transform: translateX(calc(var(--x) * -4px)) translateY(calc(var(--y) * 4px));
 `;
 const Subtitle = styled.span`
   color: white;
   opacity: 0.8;
   font-weight: 500;
   margin: 0;
+  transform: translateX(calc(var(--x) * -3px)) translateY(calc(var(--y) * 3px));
 `;
 
 const Svg = styled.svg`
@@ -34,11 +36,12 @@ const Logo = styled.svg`
   position: absolute;
   left: 50%;
 
-  transform: translateX(-50%);
   width: 40%;
   height: 40%;
   opacity: 0.8;
   top: 64px;
+
+  transform: translateX(calc(var(--x) * -6px - 50%)) translateY(calc(var(--y) * 6px));
 `;
 interface iUndicatProps {}
 
@@ -128,30 +131,13 @@ const Undicat: FunctionComponent<iUndicatProps> = () => {
           fill='white'
           opacity={0.05}
           transform='translate(20, 2) rotate(45) translate(10, 30) scale(.1) translate(-113, -658)'
-          style={{ transformOrigin: 'center' }}
+          style={{
+            transformOrigin: 'center',
+          }}
           // transform='translate(292.537274, 501.559018) rotate(21.000000) translate(-292.537274, -501.559018) '
           points='113.471912 658.732179 471.602636 658.732179 292.537274 344.385857'
         ></polygon>
-        <rect id='Rectangle' x='55' y='-12' width='30' height='30' fill='white' opacity={0.1} rx='177.5'>
-          {/* <animate
-            attributeName='x'
-            values='-200;120;-200'
-            dur='10s'
-            calcMode='spline'
-            repeatCount='indefinite'
-            keyTimes='0; 0.25; 0.5; 0.75; 1'
-            keySplines='0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1'
-          />
-          <animate
-            attributeName='y'
-            values='-200;120;-200'
-            dur='10s'
-            repeatCount='indefinite'
-            calcMode='spline'
-            keyTimes='0; 0.25; 0.5; 0.75; 1'
-            keySplines='0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1'
-          /> */}
-        </rect>
+        <rect id='Rectangle' x='55' y='-12' width='30' height='30' fill='white' opacity={0.1} rx='177.5' />
       </Svg>
 
       <Logo width='42px' height='50px' viewBox='0 0 42 50' version='1.1' xmlns='http://www.w3.org/2000/svg'>

@@ -3,6 +3,7 @@ import React, { FunctionComponent } from 'react';
 import styled from 'styled-components';
 import Undicat from './Undicat';
 import Wallit from './Wallit';
+import Armadillo from './Armadillo';
 
 const Wrapper = styled.div`
   display: grid;
@@ -25,7 +26,9 @@ const Apps: FunctionComponent<iAppsProps> = () => {
         <Undicat />
       </App>
       <App area='aac' />
-      <App area='crypto' />
+      <App area='crypto'>
+        <Armadillo />
+      </App>
       <App area='wallit'>
         <Wallit />
       </App>

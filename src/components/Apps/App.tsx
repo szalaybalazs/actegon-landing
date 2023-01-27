@@ -18,15 +18,15 @@ const App: FunctionComponent<iAppProps> = ({ area, children }) => {
 };
 
 const ContainerElement = styled.div`
-  border: 1px solid var(--border-colour);
   border-radius: 12px;
   /* min-height: 320px; */
   aspect-ratio: 2.41;
   width: 100%;
   height: 100%;
-  transition: 120ms;
   background-color: var(--background-secondary);
   overflow: hidden;
+
+  transform: rotate3d(var(--y), var(--x), 0, -4deg);
 `;
 
 const WrapperElement = styled.div`
@@ -58,7 +58,11 @@ const Container: FunctionComponent<iContainerProps> = ({ children }) => {
       <ContainerElement
         onMouseMove={_handleMouseMove}
         style={{
-          transform: `rotate3d(${rotation.y}, ${rotation.x}, 0, -4deg)`,
+          // @ts-ignore
+          '--x': rotation.x,
+          // @ts-ignore
+          '--y': rotation.y,
+          // transform: `rotate3d(${rotation.y}, ${rotation.x}, 0, -4deg)`,
           // transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
         }}
       >
