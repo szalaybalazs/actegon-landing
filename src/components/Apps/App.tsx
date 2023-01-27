@@ -35,6 +35,11 @@ const WrapperElement = styled.div`
   perspective: 800px;
 `;
 
+const easing = (value: number) => {
+  const val = Math.abs(value) ** 1.4 * (value / Math.abs(value));
+  return val;
+};
+
 interface iContainerProps {
   children: any;
 }
@@ -49,7 +54,7 @@ const Container: FunctionComponent<iContainerProps> = ({ children }) => {
     const x = (Math.max(0, Math.min(1, (pageX - left) / width)) - 0.5) * 2;
     const y = -(Math.max(0, Math.min(1, (pageY - window.scrollY - top) / height)) - 0.5) * 2;
 
-    setRotation({ x, y });
+    setRotation({ x: easing(x), y: easing(y) });
   };
   const _handleMouseLeave = () => setRotation({ x: 0, y: 0 });
 
